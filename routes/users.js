@@ -23,8 +23,11 @@ router.get('/:id', function(req, res, next) {
 
 function resError(res, status, message) {
     res.status(status);
-    res.json({
-        message
+    res.render('error',{
+        message: message,
+        error: status,
+        gif404: 'http://giphy.com/gifs/snap-PqzwbRucmkB4Q',
+        gif500: 'http://giphy.com/gifs/8ICFnA64AIIa4'
     });
 }
 module.exports = router;
