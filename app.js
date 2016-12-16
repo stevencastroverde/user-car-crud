@@ -22,7 +22,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(cors('http://carapp-3dd76.firebaseapp.com'));
+app.use(cors('https://carapp-3dd76.firebaseapp.com'));
 
 app.use('/', cars);
 app.use('/users', users);
