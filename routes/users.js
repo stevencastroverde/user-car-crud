@@ -37,6 +37,19 @@ router.get('/:id/car', function(req, res, next) {
     }
 });
 
+router.post('/:id/add_new', function(req, res, next){
+  if(req.body.make.length < 3{
+    alert("Not a real car, fuckhead.");
+  } else{
+    knex('car').insert({
+      make: req.body.make,
+      model: req.body.model,
+      color: req.body.color
+    })
+    res.redirect(`/user/${params}/car`);
+  })
+});
+
 
 function resError(res, status, message) {
     res.status(status);
